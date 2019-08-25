@@ -1,5 +1,5 @@
-import { getUsersForUI } from "./getUsersForUI";
+const getUsersForUI = require("./getUsersForUI");
 
 test("test get users for UI", () => {
-  expect(2 + 2).toBe(4);
+  expect(getUsersForUI()).toBe(0);
 });

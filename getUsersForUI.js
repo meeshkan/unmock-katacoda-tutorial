@@ -1,1 +1,2 @@
-export const getUsersForUI = () => [];
+const getUsersForUI = () => 0;
+module.exports = getUsersForUI;
