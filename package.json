@@ -1,0 +1,15 @@
+{
+  "name": "unmock-tutorial",
+  "version": "0.0.0",
+  "description": "The great and mighty unmock tutorial!",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "unmock-node": "^0.2.0"
+  }
+}
