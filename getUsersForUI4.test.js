@@ -11,7 +11,7 @@ beforeAll(() => {
   petstore = unmock.default.on().services.petstore;
 });
 
-test("usersForUI should augment resposne with custom fields", runner(async () => {
+test("petstore behaves as expected", runner(async () => {
   petstore.state(
     withCodes(200),
     // convert the list to a tuple with 42 indexable entries
