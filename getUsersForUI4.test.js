@@ -2,7 +2,7 @@ const unmock = require("unmock");
 const axios = require("axios");
 
 const {
-  gen: { withCodes, responseBody },
+  transform: { withCodes, responseBody },
   runner
 } = unmock;
 
@@ -17,7 +17,7 @@ test("petstore behaves as expected", runner(async () => {
     // convert the list to a tuple with 42 indexable entries
     responseBody().listToTuple(42),
     // make the 15th entry of the list have the name "Fluffy"
-    responseBody({ address: [ 15, "name" ]}).const("Fluffy")
+    responseBody({ lens: [ 15, "name" ]}).const("Fluffy")
   );
   const { data } = await axios("http://petstore.swagger.io/v1/pets");
   expect(data.length).toBe(42);
