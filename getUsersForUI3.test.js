@@ -37,7 +37,7 @@ beforeAll(() => {
 });
 
 test(
-  "usersForUI should augment resposne with custom fields",
+  "usersForUI should augment response with custom fields",
   runner(async () => {
     const usersForUI = await getUsersForUI();
     const responseBody = example.spy.getResponseBody();
