@@ -1,5 +1,5 @@
 const unmock = require("unmock");
-const getUsersForUI = require("./getUsersForUI");
+const getUsersForUI = require("./users");
 
 const {
   u,
