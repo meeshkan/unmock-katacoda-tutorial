@@ -28,9 +28,8 @@ beforeAll(() => {
   example = unmock.default.on().services.example;
 });
 
-test("usersForUI should augment resposne with custom fields", runner(async () => {
+test("getUsersForUI should augment resposne with custom fields", runner(async () => {
   const usersForUI = await getUsersForUI();
   const responseBody = example.spy.getResponseBody();
   expect(usersForUI).toMatchObject(JSON.parse(responseBody));
-  example.spy.resetHistory(); // otherwise it will retain history in the runner!
 }));
