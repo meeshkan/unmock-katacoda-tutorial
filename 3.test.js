@@ -28,8 +28,16 @@ beforeAll(() => {
   example = unmock.default.on().services.example;
 });
 
-test("getUsersForUI should augment resposne with custom fields", runner(async () => {
+test("getUsersForUI should augment response with custom fields", runner(async () => {
   const usersForUI = await getUsersForUI();
   const responseBody = example.spy.getResponseBody();
-  expect(usersForUI).toMatchObject(JSON.parse(responseBody));
+
+  const { users } = JSON.parse(responseBody);
+  const augmentedResponse = {
+    newlyFetched: true,
+    timestamp: expect.any(Number),
+    users: users.map(elt => ({ ...elt, seen: false }))
+  }
+
+  expect(usersForUI).toMatchObject(augmentedResponse);
 }));
