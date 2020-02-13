@@ -1,10 +1,10 @@
 const unmock = require("unmock");
+const runner = require("unmock-jest-runner").default;
 const getUsersForUI = require("./users");
 
 const {
   u,
-  transform: { withCodes, responseBody },
-  runner
+  transform: { withCodes, responseBody }
 } = unmock;
 
 unmock
