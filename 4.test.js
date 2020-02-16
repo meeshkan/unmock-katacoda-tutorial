@@ -1,9 +1,9 @@
 const unmock = require("unmock");
+const runner = require("unmock-jest-runner").default;
 const axios = require("axios");
 
 const {
-  transform: { withCodes, responseBody },
-  runner
+  transform: { withCodes, responseBody }
 } = unmock;
 
 let petstore;

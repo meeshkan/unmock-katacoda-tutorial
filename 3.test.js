@@ -1,9 +1,9 @@
 const unmock = require("unmock");
+const runner = require("unmock-jest-runner").default;
 const getUsersForUI = require("./users");
 
 const {
-  u,
-  runner
+  u
 } = unmock;
 
 unmock
